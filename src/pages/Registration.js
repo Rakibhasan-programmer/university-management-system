@@ -45,6 +45,7 @@ export default function Registration() {
                 .then(res => res.json())
                 .then(data => {
                     toast.success(data?.data?.message);
+                    navigate("/")
                 })
                 .catch(err => toast.error(err?.error?.message))
             }
